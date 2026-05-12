@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Khalid Esthetic Smiles – Premium Dental Care, Chennai</title>
+<meta name="description" content="Contact Khalid Esthetic Smiles in Chennai. Book an appointment, find our location, or reach us by phone and WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-lt: #E8D5A3;
+  --gold-dk: #9E7A2E;
+  --gold-shine: #F5E6B8;
+  --teal: #1E7A8A;
+  --teal-lt: #3AAABF;
+  --teal-dk: #125E6B;
+  --white: #FFFFFF;
+  --off-white: #F7F8FC;
+  --cream: #FAF8F4;
+  --text: #0F1929;
+  --text-md: #4A5568;
+  --text-lt: #94A3B8;
+  --shadow-xs: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-sm: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-md: 0 12px 40px rgba(0,0,0,0.12);
+  --shadow-lg: 0 24px 60px rgba(0,0,0,0.18);
+  --shadow-gold: 0 8px 32px rgba(201,168,76,0.35);
+  --shadow-teal: 0 8px 32px rgba(30,122,138,0.3);
+  --radius: 16px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(0.4,0,0.2,1);
+  --spring: cubic-bezier(0.34,1.56,0.64,1);
+  --t: 0.35s;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--white); overflow-x:hidden; }
+img { max-width:100%; display:block; }
+a { text-decoration:none; color:inherit; }
+ul { list-style:none; }
+.container { width:92%; max-width:1240px; margin:0 auto; }
+.section-tag {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:0.7rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--gold); background:rgba(201,168,76,0.1);
+  border:1px solid rgba(201,168,76,0.35); padding:7px 18px;
+  border-radius:50px; margin-bottom:16px;
+}
+.section-tag::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--gold); }
+.section-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:700; line-height:1.1; color:var(--text); margin-bottom:16px;
+}
+.section-sub { font-size:0.95rem; color:var(--text-md); line-height:1.75; max-width:580px; }
+.btn {
+  display:inline-flex; align-items:center; gap:9px;
+  padding:14px 32px; border-radius:50px;
+  font-family:'DM Sans',sans-serif; font-size:0.88rem; font-weight:600;
+  cursor:pointer; border:none; transition:all var(--t) var(--ease);
+  letter-spacing:0.02em; position:relative; overflow:hidden;
+}
+.btn-gold {
+  background:linear-gradient(135deg,var(--gold-shine),var(--gold),var(--gold-dk));
+  background-size:200% 200%; background-position:0% 50%;
+  color:#fff; box-shadow:var(--shadow-gold);
+}
+.btn-gold:hover { background-position:100% 50%; transform:translateY(-2px); box-shadow:0 16px 40px rgba(201,168,76,0.5); }
+.reveal { opacity:0; transform:translateY(40px); transition:opacity 0.75s ease,transform 0.75s ease; }
+.reveal.visible { opacity:1; transform:none; }
+.reveal-left { opacity:0; transform:translateX(-50px); transition:opacity 0.75s ease,transform 0.75s ease; }
+.reveal-left.visible { opacity:1; transform:none; }
+.reveal-right { opacity:0; transform:translateX(50px); transition:opacity 0.75s ease,transform 0.75s ease; }
+.reveal-right.visible { opacity:1; transform:none; }
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ══ NAVBAR ══ */
+#navbar {
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  background:rgba(255,255,255,0.97); backdrop-filter:blur(24px) saturate(180%);
+  box-shadow:0 1px 0 rgba(0,0,0,0.06),var(--shadow-sm);
+  padding:14px 0; transition:all var(--t) var(--ease);
+}
+.nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.logo { display:flex; flex-direction:column; line-height:1; gap:2px; }
+.logo-main { font-family:'Playfair Display',serif; font-size:1.55rem; font-weight:700; color:var(--text); }
+.logo-dot { color:var(--gold); }
+.logo-sub { font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--text-lt); }
+.nav-links { display:flex; align-items:center; gap:32px; }
+.nav-links a {
+  font-size:0.83rem; font-weight:500; color:var(--text-md);
+  transition:all var(--t); position:relative; padding-bottom:4px;
+}
+.nav-links a::after {
+  content:''; position:absolute; bottom:0; left:0; width:0;
+  height:2px; background:var(--gold); border-radius:2px; transition:width var(--t);
+}
+.nav-links a:hover, .nav-links a.active { color:var(--teal); }
+.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; }
+.hamburger span { width:26px; height:2px; background:var(--text); border-radius:2px; display:block; transition:all var(--t); }
+.mobile-menu {
+  display:none; position:fixed; inset:0;
+  background:rgba(255,255,255,0.98); backdrop-filter:blur(24px);
+  z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:28px;
+}
+.mobile-menu.open { display:flex; animation:fadeIn 0.25s ease; }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+.mobile-menu a { font-size:1.5rem; font-family:'Playfair Display',serif; font-weight:600; color:var(--text); transition:color var(--t); }
+.mobile-menu a:hover { color:var(--teal); }
+.mobile-close { position:absolute; top:24px; right:28px; font-size:1.6rem; cursor:pointer; color:var(--text-md); }
+
+/* ══ PAGE HERO ══ */
+.page-hero {
+  padding:130px 0 90px;
+  background:linear-gradient(135deg,var(--text) 0%,#0D1B36 60%,#0A2830 100%);
+  position:relative; overflow:hidden; text-align:center;
+}
+.page-hero::before {
+  content:''; position:absolute; inset:0;
+  background:url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1600&q=50') center/cover;
+  opacity:0.07;
+}
+.page-hero-content { position:relative; z-index:2; }
+.page-hero .section-tag { color:var(--gold-lt); border-color:rgba(201,168,76,0.4); background:rgba(201,168,76,0.1); }
+.page-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.4rem,5vw,4.2rem); color:var(--white); font-weight:700; margin-bottom:18px; line-height:1.1; }
+.page-hero h1 em { color:var(--gold-lt); font-style:italic; }
+.page-hero p { color:rgba(255,255,255,0.7); font-size:1rem; max-width:540px; margin:0 auto; line-height:1.8; }
+.breadcrumb { display:flex; align-items:center; justify-content:center; gap:8px; margin-top:28px; font-size:0.77rem; color:rgba(255,255,255,0.45); }
+.breadcrumb a { color:rgba(255,255,255,0.6); transition:color var(--t); }
+.breadcrumb a:hover { color:var(--gold-lt); }
+.breadcrumb span { color:var(--gold); }
+
+/* ══ QUICK CONTACT STRIP ══ */
+.quick-strip { background:linear-gradient(135deg,var(--teal-dk),var(--teal)); padding:0; }
+.quick-strip-inner { display:grid; grid-template-columns:repeat(3,1fr); }
+.quick-item {
+  display:flex; align-items:center; gap:16px;
+  padding:28px 32px; color:#fff;
+  border-right:1px solid rgba(255,255,255,0.1);
+  transition:background var(--t); cursor:pointer; text-decoration:none;
+}
+.quick-item:last-child { border-right:none; }
+.quick-item:hover { background:rgba(255,255,255,0.08); }
+.quick-icon {
+  width:52px; height:52px; border-radius:16px;
+  background:rgba(255,255,255,0.15); display:flex;
+  align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0;
+}
+.quick-text strong { display:block; font-size:0.9rem; font-weight:600; margin-bottom:3px; }
+.quick-text span { font-size:0.78rem; opacity:0.75; }
+
+/* ══ MAIN CONTACT SECTION ══ */
+.contact-main { padding:100px 0; background:var(--off-white); }
+.contact-grid { display:grid; grid-template-columns:1fr 1.6fr; gap:52px; align-items:start; }
+
+/* Info Cards */
+.contact-info { display:flex; flex-direction:column; gap:20px; }
+.info-card {
+  background:var(--white); border-radius:var(--radius); padding:24px;
+  box-shadow:var(--shadow-xs); display:flex; align-items:flex-start; gap:16px;
+  transition:all var(--t); border:1px solid rgba(0,0,0,0.04);
+}
+.info-card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+.info-icon {
+  width:52px; height:52px; border-radius:15px;
+  background:linear-gradient(135deg,var(--teal),var(--teal-lt));
+  color:#fff; font-size:1.2rem; display:flex;
+  align-items:center; justify-content:center; flex-shrink:0;
+}
+.info-body strong { display:block; font-size:0.9rem; font-weight:600; margin-bottom:6px; }
+.info-body p, .info-body a { font-size:0.82rem; color:var(--text-md); line-height:1.7; display:block; transition:color var(--t); }
+.info-body a:hover { color:var(--teal); }
+.hours-list { display:flex; flex-direction:column; gap:6px; margin-top:4px; }
+.hour-row { display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:var(--text-md); padding:6px 0; border-bottom:1px solid var(--off-white); }
+.hour-row:last-child { border-bottom:none; }
+.hour-row strong { color:var(--text); font-size:0.8rem; font-weight:600; }
+.open-badge { font-size:0.67rem; background:rgba(30,122,138,0.1); color:var(--teal); border-radius:50px; padding:2px 10px; font-weight:600; }
+
+/* ══ GOOGLE MAP EMBED ══ */
+.map-wrap {
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  height:280px;
+  position:relative;
+  border:3px solid var(--white);
+  outline:1px solid rgba(30,122,138,0.2);
+}
+.map-wrap iframe {
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;
+  filter:saturate(1.1) contrast(1.05);
+}
+.map-overlay-btn {
+  position:absolute;
+  bottom:14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--teal);
+  color:#fff;
+  font-size:0.78rem;
+  font-weight:600;
+  padding:10px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 4px 18px rgba(30,122,138,0.5);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+  transition:all var(--t);
+  z-index:10;
+  font-family:'DM Sans',sans-serif;
+}
+.map-overlay-btn:hover {
+  background:var(--teal-dk);
+  transform:translateX(-50%) translateY(-2px);
+  box-shadow:0 8px 28px rgba(30,122,138,0.55);
+}
+
+/* ══ CONTACT FORM (WhatsApp-powered) ══ */
+.contact-form-wrap {
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  padding:46px;
+  box-shadow:var(--shadow-md);
+  position:relative;
+  overflow:hidden;
+}
+.contact-form-wrap::before {
+  content:'';
+  position:absolute;
+  top:0; left:10%; right:10%;
+  height:3px;
+  background:linear-gradient(90deg, transparent, #25D366 40%, #128C7E 60%, transparent);
+  border-radius:100%;
+}
+.form-title { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; margin-bottom:6px; }
+.form-sub { font-size:0.82rem; color:var(--text-md); margin-bottom:8px; }
+
+/* WhatsApp badge under subtitle */
+.wa-powered {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(37,211,102,0.08);
+  border:1px solid rgba(37,211,102,0.25);
+  border-radius:50px;
+  padding:6px 16px;
+  font-size:0.73rem;
+  font-weight:600;
+  color:#128C7E;
+  margin-bottom:24px;
+}
+.wa-powered svg { width:14px; height:14px; fill:#25D366; }
+
+.form-group { margin-bottom:18px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.form-group label { display:block; font-size:0.77rem; font-weight:600; color:var(--text-md); margin-bottom:7px; letter-spacing:0.04em; text-transform:uppercase; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%; padding:13px 16px;
+  border:1.5px solid #E2E8F0; border-radius:12px;
+  font-family:'DM Sans',sans-serif; font-size:0.85rem;
+  color:var(--text); background:var(--off-white);
+  transition:all var(--t); outline:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:#25D366;
+  background:var(--white);
+  box-shadow:0 0 0 3px rgba(37,211,102,0.1);
+}
+.form-group textarea { height:110px; resize:none; }
+.form-group select { cursor:pointer; }
+
+/* WhatsApp Submit Button */
+.submit-btn {
+  width:100%; padding:16px; font-size:0.92rem; font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff; border:none; border-radius:50px;
+  font-family:'DM Sans',sans-serif; transition:all var(--t);
+  letter-spacing:0.02em;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  box-shadow:0 8px 28px rgba(37,211,102,0.35);
+}
+.submit-btn:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(37,211,102,0.5); }
+.submit-btn svg { width:20px; height:20px; fill:#fff; flex-shrink:0; }
+
+.privacy-note {
+  text-align:center;
+  font-size:0.73rem;
+  color:var(--text-lt);
+  margin-top:14px;
+}
+
+/* Success Message */
+.success-msg {
+  display:none; text-align:center; padding:48px 32px;
+}
+.success-msg.show { display:block; animation:popIn 0.5s var(--spring); }
+@keyframes popIn { from{transform:scale(0.7);opacity:0} to{transform:scale(1);opacity:1} }
+.success-msg .check { font-size:3.5rem; margin-bottom:16px; }
+.success-msg h4 {
+  font-family:'Playfair Display',serif;
+  color:var(--text); font-size:1.5rem; margin-bottom:10px;
+}
+.success-msg p { color:var(--text-md); font-size:0.86rem; line-height:1.75; }
+.success-actions {
+  margin-top:24px;
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+}
+.success-actions a {
+  padding:12px 26px; border-radius:50px;
+  font-size:0.82rem; font-weight:600;
+  display:inline-flex; align-items:center; gap:8px;
+  transition:all var(--t);
+}
+.success-actions .wa-btn {
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff; box-shadow:0 6px 20px rgba(37,211,102,0.3);
+}
+.success-actions .wa-btn:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(37,211,102,0.45); }
+.success-actions .call-btn {
+  background:linear-gradient(135deg,var(--teal),var(--teal-dk));
+  color:#fff; box-shadow:0 6px 20px rgba(30,122,138,0.3);
+}
+.success-actions .call-btn:hover { transform:translateY(-2px); }
+
+/* ══ FAQ SECTION ══ */
+.faq-section { padding:100px 0; background:var(--white); }
+.faq-header { text-align:center; margin-bottom:60px; }
+.faq-header .section-sub { margin:0 auto; }
+.faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:960px; margin:0 auto; }
+.faq-item {
+  background:var(--off-white); border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,0.05); overflow:hidden; transition:all var(--t);
+}
+.faq-item.open { background:var(--white); box-shadow:var(--shadow-sm); }
+.faq-q {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 24px; cursor:pointer; gap:16px;
+}
+.faq-q span { font-size:0.88rem; font-weight:600; color:var(--text); line-height:1.4; }
+.faq-arrow {
+  width:30px; height:30px; border-radius:50%; flex-shrink:0;
+  background:rgba(30,122,138,0.1); color:var(--teal);
+  display:flex; align-items:center; justify-content:center;
+  font-size:1rem; transition:all var(--t); font-weight:700;
+}
+.faq-item.open .faq-arrow { background:var(--teal); color:#fff; transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.4s var(--ease),padding 0.3s; padding:0 24px; }
+.faq-item.open .faq-a { max-height:200px; padding:0 24px 20px; }
+.faq-a p { font-size:0.83rem; color:var(--text-md); line-height:1.75; }
+
+/* ══ CTA STRIP ══ */
+.cta-strip {
+  padding:80px 0;
+  background:linear-gradient(135deg,var(--teal-dk),var(--teal),#1A8A9A);
+  text-align:center; position:relative; overflow:hidden;
+}
+.cta-strip::before {
+  content:''; position:absolute; inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(255,255,255,0.02) 60px,rgba(255,255,255,0.02) 120px);
+}
+.cta-inner { position:relative; z-index:2; }
+.cta-strip h2 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3.5vw,2.8rem); color:var(--white); margin-bottom:14px; }
+.cta-strip p { color:rgba(255,255,255,0.78); font-size:1rem; margin-bottom:34px; max-width:500px; margin-left:auto; margin-right:auto; }
+.cta-btns { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+.btn-white { background:var(--white); color:var(--teal); font-weight:700; padding:14px 32px; border-radius:50px; border:none; font-family:'DM Sans',sans-serif; font-size:0.88rem; cursor:pointer; transition:all var(--t); display:inline-flex; align-items:center; gap:9px; }
+.btn-white:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+.btn-outline-white { background:transparent; color:var(--white); border:2px solid rgba(255,255,255,0.6); font-weight:600; padding:14px 32px; border-radius:50px; font-family:'DM Sans',sans-serif; font-size:0.88rem; cursor:pointer; transition:all var(--t); display:inline-flex; align-items:center; gap:9px; text-decoration:none; }
+.btn-outline-white:hover { background:rgba(255,255,255,0.12); border-color:rgba(255,255,255,0.9); }
+
+/* ══ FOOTER ══ */
+footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32px; }
+.footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:48px; margin-bottom:54px; }
+.footer-brand .flogo { font-family:'Playfair Display',serif; font-size:1.55rem; font-weight:700; color:var(--white); }
+.footer-about { font-size:0.81rem; line-height:1.8; margin-top:16px; color:rgba(255,255,255,0.55); }
+.footer-socials { display:flex; gap:10px; margin-top:22px; }
+.social-btn { width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.55); font-size:0.85rem; transition:all var(--t); border:1px solid rgba(255,255,255,0.1); }
+.social-btn:hover { background:var(--gold); color:#fff; border-color:var(--gold); transform:translateY(-2px); }
+.footer-col h4 { font-size:0.85rem; font-weight:600; color:var(--white); margin-bottom:20px; letter-spacing:0.06em; }
+.footer-col ul li { margin-bottom:10px; }
+.footer-col ul li a { font-size:0.81rem; color:rgba(255,255,255,0.5); transition:all var(--t); }
+.footer-col ul li a:hover { color:var(--gold-lt); padding-left:4px; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.07); padding-top:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+.footer-copy { font-size:0.77rem; color:rgba(255,255,255,0.35); }
+.footer-badge { display:flex; align-items:center; gap:8px; font-size:0.74rem; color:rgba(255,255,255,0.35); }
+.footer-badge .gold-dot { width:6px; height:6px; border-radius:50%; background:var(--gold); }
+
+/* ══ FLOATING ACTIONS ══ */
+.float-actions { position:fixed; right:24px; bottom:24px; z-index:900; display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
+.float-wa { width:58px; height:58px; border-radius:50%; background:linear-gradient(135deg,#25D366,#128C7E); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 28px rgba(37,211,102,0.45); transition:all var(--t) var(--spring); position:relative; cursor:pointer; text-decoration:none; }
+.float-wa:hover { transform:scale(1.12) translateY(-3px); }
+.float-wa::before { content:''; position:absolute; inset:-7px; border-radius:50%; border:2px solid rgba(37,211,102,0.4); animation:waRing 2.4s infinite; }
+@keyframes waRing { 0%{transform:scale(1);opacity:0.7} 100%{transform:scale(1.6);opacity:0} }
+.float-call { width:54px; height:54px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-dk)); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.3rem; box-shadow:0 8px 28px rgba(201,168,76,0.45); transition:all var(--t) var(--spring); text-decoration:none; position:relative; }
+.float-call:hover { transform:scale(1.1) translateY(-3px); }
+.float-call::before { content:''; position:absolute; inset:-7px; border-radius:50%; border:2px solid rgba(201,168,76,0.35); animation:callRing 2.4s infinite 1.2s; }
+@keyframes callRing { 0%{transform:scale(1);opacity:0.7} 100%{transform:scale(1.6);opacity:0} }
+.float-book { background:linear-gradient(135deg,var(--teal),var(--teal-dk)); color:#fff; border:none; border-radius:50px; padding:13px 22px; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; cursor:pointer; box-shadow:var(--shadow-teal); display:flex; align-items:center; gap:8px; transition:all var(--t) var(--spring); white-space:nowrap; }
+.float-book:hover { transform:translateY(-4px); }
+.float-wa-wrap, .float-call-wrap { position:relative; display:flex; align-items:center; }
+.float-tooltip { position:absolute; right:68px; background:rgba(15,25,41,0.9); color:#fff; font-size:0.74rem; font-weight:500; padding:5px 12px; border-radius:8px; white-space:nowrap; pointer-events:none; opacity:0; transform:translateX(8px); transition:all 0.2s; }
+.float-wa-wrap:hover .float-tooltip, .float-call-wrap:hover .float-tooltip { opacity:1; transform:translateX(0); }
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px){
+  .contact-grid { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:36px; }
+  .faq-grid { grid-template-columns:1fr; }
+  .quick-strip-inner { grid-template-columns:1fr; }
+  .quick-item { border-right:none; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .quick-item:last-child { border-bottom:none; }
+}
+@media(max-width:768px){
+  .nav-links, .nav-cta { display:none; }
+  .hamburger { display:flex; }
+  .footer-grid { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+  .float-book { display:none; }
+  .contact-form-wrap { padding:28px 22px; }
+  .map-wrap { height:240px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">
+        <span class="logo-main">Khalid<span class="logo-dot">.</span>Esthetic Smiles</span>
+        <span class="logo-sub">Premium Dental Care — Chennai</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="treatments.html">Treatments</a>
+        <a href="before-after.html">Before &amp; After</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-gold" onclick="document.getElementById('contactFormSection').scrollIntoView({behavior:'smooth'})">📅 Book Appointment</button>
+      </div>
+      <div class="hamburger" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" onclick="toggleMobile()">✕</span>
+  <a href="../index.html" onclick="toggleMobile()">Home</a>
+  <a href="about.html" onclick="toggleMobile()">About Us</a>
+  <a href="treatments.html" onclick="toggleMobile()">Treatments</a>
+  <a href="before-after.html" onclick="toggleMobile()">Before &amp; After</a>
+  <a href="contact.html" onclick="toggleMobile()">Contact</a>
+  <button class="btn btn-gold" onclick="toggleMobile()">📅 Book Appointment</button>
+</div>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <div class="section-tag">Get In Touch</div>
+    <h1>We'd Love to <em>Hear</em><br>From You</h1>
+    <p>Book an appointment, ask a question, or just say hello. Our friendly team is ready to help you take the first step towards your perfect smile.</p>
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>›</span>
+      <span style="color:var(--gold-lt)">Contact Us</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUICK CONTACT STRIP ══ -->
+<div class="quick-strip">
+  <div class="container" style="padding:0;max-width:100%;width:100%;">
+    <div class="quick-strip-inner">
+      <a class="quick-item" href="tel:+919042985433">
+        <div class="quick-icon">📞</div>
+        <div class="quick-text">
+          <strong>Call Us Directly</strong>
+          <span>+91 90429 85433 — Mon–Sat, 9AM–8PM</span>
+        </div>
+      </a>
+      <a class="quick-item" href="https://wa.me/919042985433" target="_blank">
+        <div class="quick-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+        </div>
+        <div class="quick-text">
+          <strong>WhatsApp Us</strong>
+          <span>+91 90429 85433 — Quick reply guaranteed</span>
+        </div>
+      </a>
+      <a class="quick-item" href="mailto:Kgdentist@gmail.com ">
+        <div class="quick-icon">✉️</div>
+        <div class="quick-text">
+          <strong>Email Us</strong>
+          <span>Kgdentist@gmail.com </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAIN CONTACT SECTION ══ -->
+<section class="contact-main" id="contactFormSection">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info + Map -->
+      <div class="contact-info reveal-left">
+
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div class="info-body">
+            <strong>Clinic Address</strong>
+            <p>Khalid Esthetic Smiles<br>
+            123, Anna Salai (Mount Road),<br>
+            Opposite Landmark Building,<br>
+            Chennai – 600 018, Tamil Nadu.</p>
+            <a href="https://maps.google.com/?q=Anna+Salai+Chennai+600018" target="_blank"
+               style="margin-top:10px;color:var(--teal);font-weight:600;font-size:0.8rem;">
+              🗺 Get Directions →
+            </a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">📞</div>
+          <div class="info-body">
+            <strong>Phone &amp; WhatsApp</strong>
+            <a href="tel:+919042985433">📞 +91 90429 85433</a>
+            <a href="https://wa.me/919042985433" target="_blank"
+               style="margin-top:6px;color:#25D366;font-weight:600;display:flex;align-items:center;gap:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+              WhatsApp: +91 90429 85433
+            </a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">🕐</div>
+          <div class="info-body">
+            <strong>Clinic Hours</strong>
+            <div class="hours-list">
+              <div class="hour-row">
+                <strong>Mon – Fri</strong>
+                <span>9:00 AM – 8:00 PM <span class="open-badge">Open</span></span>
+              </div>
+              <div class="hour-row">
+                <strong>Saturday</strong>
+                <span>9:00 AM – 6:00 PM <span class="open-badge">Open</span></span>
+              </div>
+              <div class="hour-row">
+                <strong>Sunday</strong>
+                <span style="color:#E53E3E;">By Appointment Only</span>
+              </div>
+              <div class="hour-row">
+                <strong>Emergencies</strong>
+                <span>24/7 on WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">✉️</div>
+          <div class="info-body">
+            <strong>Email Us</strong>
+            <a href="mailto:Kgdentist@gmail.com ">Kgdentist@gmail.com </a>
+             <a href="mailto:mountsdental1997@gmail.com">mountsdental1997@gmail.com </a>
+              </div>
+        </div>
+
+        <!-- ══ GOOGLE MAP EMBED ══ -->
+        <div class="map-wrap">
+          <!-- Anna Salai (Mount Road), Chennai embedded map -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9487349754!2d80.2524997!3d13.0559376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266e88bfb53b7%3A0x97e64b8b5d1e73a7!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu%20600018!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Khalid Esthetic Smiles Location">
+          </iframe>
+          <a
+            href="https://maps.google.com/?q=Anna+Salai+Chennai+600018"
+            target="_blank"
+            class="map-overlay-btn">
+            📍 Open in Google Maps
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right: Contact Form → WhatsApp -->
+      <div class="contact-form-wrap reveal-right">
+        <h3 class="form-title">Book Your Appointment</h3>
+        <p class="form-sub">Fill in the form — your details will be sent instantly via WhatsApp.</p>
+
+        <div class="wa-powered">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+          Powered by WhatsApp — Instant Delivery
+        </div>
+
+        <div id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" placeholder="Your full name" id="f-name">
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="+91 98765 43210" id="f-phone">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com" id="f-email">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Preferred Date *</label>
+              <input type="date" id="f-date">
+            </div>
+            <div class="form-group">
+              <label>Preferred Time *</label>
+              <select id="f-time">
+                <option value="">Select time slot</option>
+                <option>9:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 11:00 AM</option>
+                <option>11:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 1:00 PM</option>
+                <option>2:00 PM – 3:00 PM</option>
+                <option>3:00 PM – 4:00 PM</option>
+                <option>4:00 PM – 5:00 PM</option>
+                <option>5:00 PM – 6:00 PM</option>
+                <option>6:00 PM – 7:00 PM</option>
+                <option>7:00 PM – 8:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Treatment Interested In</label>
+            <select id="f-treatment">
+              <option value="">Select a treatment</option>
+              <option>Teeth Whitening</option>
+              <option>Dental Implants</option>
+              <option>Root Canal Treatment</option>
+              <option>Smile Makeover</option>
+              <option>Braces &amp; Aligners</option>
+              <option>Veneers / Laminates</option>
+              <option>Cosmetic Dentistry</option>
+              <option>Gum Treatment</option>
+              <option>Tooth Extraction</option>
+              <option>General Checkup &amp; Cleaning</option>
+              <option>Pediatric Dentistry</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>How Did You Hear About Us?</label>
+            <select id="f-source">
+              <option value="">Select an option</option>
+              <option>Google Search</option>
+              <option>Instagram / Facebook</option>
+              <option>Friend / Family Referral</option>
+              <option>JustDial / Practo</option>
+              <option>Walked Past the Clinic</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Message / Specific Concerns</label>
+            <textarea id="f-msg" placeholder="Tell us about your dental concern or any questions you have..."></textarea>
+          </div>
+
+          <button class="submit-btn" onclick="submitContact()">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+            Send via WhatsApp — Book Now
+          </button>
+
+          <p class="privacy-note">🔒 Your information is 100% private and secure. We never share your data.</p>
+        </div>
+
+        <div class="success-msg" id="contactSuccess">
+          <div class="check">🎉</div>
+          <h4>Appointment Request Sent!</h4>
+          <p>Your details have been sent to us via WhatsApp. Our team will confirm your appointment slot very soon. We look forward to seeing your beautiful smile!</p>
+          <div class="success-actions">
+            <a class="wa-btn" href="https://wa.me/919042985433" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <a class="call-btn" href="tel:+919042985433">📞 Call Us Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ SECTION ══ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-tag reveal">FAQs</div>
+      <h2 class="section-title reveal d1">Frequently Asked Questions</h2>
+      <p class="section-sub reveal d2">Quick answers to the questions we hear most often from our patients.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item reveal d1">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How do I book an appointment?</span>
+          <div class="faq-arrow">+</div>
+        </div>
+        <div class="faq-a"><p>You can book via the form above, call us at +91 90429 85433, or WhatsApp us. We confirm all appointments within 2 hours during clinic hours.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is parking available at the clinic?</span>
+          <div class="faq-arrow">+</div>
+        </div>
+        <div class="faq-a"><p>Yes! We have free dedicated parking available for all our patients adjacent to the clinic building on Anna Salai.</p></div>
+      </div>
+      <div class="faq-item reveal d3">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you offer EMI or insurance options?</span>
+          <div class="faq-arrow">+</div>
+        </div>
+        <div class="faq-a"><p>Absolutely. We offer 0% interest EMI plans through major banks and accept most major dental insurance providers. Our team will guide you through the options during your consultation.</p></div>
+      </div>
+      <div class="faq-item reveal d4">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is the initial consultation free?</span>
+          <div class="faq-arrow">+</div>
+        </div>
+        <div class="faq-a"><p>Yes! Your first consultation at Khalid Esthetic Smiles is completely free. Our doctor will assess your dental health and discuss a personalised treatment plan with no obligation.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What should I bring for my first visit?</span>
+          <div class="faq-arrow">+</div>
+        </div>
+        <div class="faq-a"><p>Please bring any previous dental records or X-rays if available, your ID proof, and insurance card if applicable. Arriving 10 minutes early helps us serve you better.</p></div>
+      </div>
+      <div class="faq-item reveal d1">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you handle dental emergencies?</span>
+          <div class="faq-arrow">+</div>
+        </div>
+        <div class="faq-a"><p>Yes. For dental emergencies — severe toothache, broken tooth, lost crown — WhatsApp or call us immediately at +91 90429 85433. We prioritise emergency cases and will accommodate you as quickly as possible.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA STRIP ══ -->
+<section class="cta-strip">
+  <div class="container cta-inner">
+    <h2>Your Dream Smile Awaits</h2>
+    <p>Take the first step today. Book your free consultation and let us craft the smile you've always deserved.</p>
+    <div class="cta-btns">
+      <button class="btn-white" onclick="document.getElementById('contactFormSection').scrollIntoView({behavior:'smooth'})">📅 Book Free Consultation</button>
+      <a class="btn-outline-white" href="tel:+919042985433">📞 Call: +91 90429 85433</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="flogo">Khalid<span style="color:var(--gold)">.</span>Esthetic Smiles</div>
+        <div style="font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:3px">Premium Dental Care — Chennai</div>
+        <p class="footer-about">Chennai's most trusted premium dental clinic delivering beautiful, healthy smiles since 2009. Your confidence is our greatest achievement.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" title="Facebook">f</a>
+          <a class="social-btn" href="#" title="Instagram">📷</a>
+          <a class="social-btn" href="#" title="YouTube">▶</a>
+          <a class="social-btn" href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="treatments.html">Our Treatments</a></li>
+          <li><a href="before-after.html">Before &amp; After</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="treatments.html">Teeth Whitening</a></li>
+          <li><a href="treatments.html">Dental Implants</a></li>
+          <li><a href="treatments.html">Smile Makeover</a></li>
+          <li><a href="treatments.html">Root Canal</a></li>
+          <li><a href="treatments.html">Clear Aligners</a></li>
+          <li><a href="treatments.html">Gum Treatment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 27.59/117, Balakrishnapuram, Adambakkam, Chennai, Tamil Nadu 600088</a></li>
+          <li><a href="tel:+919042985433">📞 +91 90429 85433</a></li>
+          <li><a href="mailto:Kgdentist@gmail.com ">✉️ Kgdentist@gmail.com </a></li>
+           <li><a href="mailto:mountsdental1997@gmail.com">✉️ mountsdental1997@gmail.com </a></li>
+          <li><a href="#">🕐 Mon–Sat: 9AM – 8PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Khalid Esthetic Smiles. All rights reserved.</div>
+      <div class="footer-badge"><div class="gold-dot"></div>Designed with ❤️ for Beautiful Smiles</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ FLOATING ACTIONS ══ -->
+<div class="float-actions">
+  <button class="float-book" onclick="document.getElementById('contactFormSection').scrollIntoView({behavior:'smooth'})">📅 Book Now</button>
+  <div class="float-call-wrap">
+    <span class="float-tooltip">Call Us</span>
+    <a class="float-call" href="tel:+919042985433" title="Call Us">📞</a>
+  </div>
+  <div class="float-wa-wrap">
+    <span class="float-tooltip">WhatsApp Us</span>
+    <a class="float-wa" href="https://wa.me/919042985433" target="_blank" title="WhatsApp Us">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+    </a>
+  </div>
+</div>
+
+<script>
+/* ══ Mobile Menu ══ */
+function toggleMobile() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+/* ══ Set min date ══ */
+const dateInput = document.getElementById('f-date');
+if (dateInput) {
+  dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+}
+
+/* ══ Contact Form → WhatsApp ══ */
+function submitContact() {
+  const name      = document.getElementById('f-name').value.trim();
+  const phone     = document.getElementById('f-phone').value.trim();
+  const email     = document.getElementById('f-email').value.trim();
+  const date      = document.getElementById('f-date').value;
+  const time      = document.getElementById('f-time').value;
+  const treatment = document.getElementById('f-treatment').value;
+  const source    = document.getElementById('f-source').value;
+  const msg       = document.getElementById('f-msg').value.trim();
+
+  if (!name)  { alert('Please enter your full name.'); return; }
+  if (!phone) { alert('Please enter your phone number.'); return; }
+
+  // Format date
+  let formattedDate = 'Not specified';
+  if (date) {
+    formattedDate = new Date(date).toLocaleDateString('en-IN', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+  }
+
+  // Build WhatsApp message
+  const waMsg =
+`*New Appointment — Khalid Esthetic Smiles*
+━━━━━━━━━━━━━━━━━━━━━━━
+*Name:* ${name}
+*Phone:* ${phone}${email ? `\n *Email:* ${email}` : ''}
+*Date:* ${formattedDate}
+*Time Slot:* ${time || 'Not specified'}
+*Treatment:* ${treatment || 'Not specified'}
+*Source:* ${source || 'Not specified'}${msg ? `\n *Message:* ${msg}` : ''}
+━━━━━━━━━━━━━━━━━━━━━━━
+📍 Via Contact Page — Khalid Esthetic Smiles Website`;
+
+  // Show success state first
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('contactSuccess').classList.add('show');
+
+  // Open WhatsApp
+  window.open(`https://wa.me/919042985433?text=${encodeURIComponent(waMsg)}`, '_blank');
+}
+
+/* ══ FAQ Toggle ══ */
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+/* ══ Scroll Reveal ══ */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

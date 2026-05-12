@@ -1,0 +1,5 @@
+# Sensitive files
+pages/password
+*.env
+.DS_Store
+node_modules/

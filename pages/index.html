@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalid Esthetic Smiles | Premium Dental Care – Chennai</title>
+<meta name="description" content="Khalid Esthetic Smiles – Chennai's trusted premium dental clinic. Teeth whitening, implants, smile makeovers, braces, root canals & more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="logo" href="../index.html">
+        <span class="logo-main">Khalid<span class="logo-dot">.</span>Esthetic Smiles</span>
+        <span class="logo-sub">Premium Dental Care — Chennai</span>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html" class="active">Home</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/treatments.html">Treatments</a>
+        <a href="pages/before-after.html">Before &amp; After</a>
+        <a href="pages/contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <button class="btn btn-gold" onclick="scrollToAppt()">📅 Book Appointment</button>
+      </div>
+      <div class="hamburger" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" onclick="toggleMobile()">✕</span>
+  <a href="index.html" onclick="toggleMobile()">Home</a>
+  <a href="pages/about.html" onclick="toggleMobile()">About Us</a>
+  <a href="pages/treatments.html" onclick="toggleMobile()">Treatments</a>
+  <a href="pages/before-after.html" onclick="toggleMobile()">Before &amp; After</a>
+  <a href="pages/contact.html" onclick="toggleMobile()">Contact</a>
+  <button class="btn btn-gold" onclick="scrollToAppt();toggleMobile()">📅 Book Appointment</button>
+</div>
+
+<!-- ══ HERO SLIDER ══ -->
+<section id="hero">
+  <div class="slides-wrap">
+    <div class="slide slide-1 active">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide slide-2">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide slide-3">
+      <div class="slide-bg"></div>
+      <div class="slide-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="slide-progress" id="slideProgress"></div>
+
+  <div class="container hero-content">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Chennai's Premier Dental Clinic
+      </div>
+      <h1 class="hero-title">
+        Trusted Dental Care<br>for a <em>Healthy &amp;<br>Confident</em> Smile
+      </h1>
+      <p class="hero-sub">
+        Experience world-class dental treatments delivered with precision, compassion, and the finest technology — right here in Chennai.
+      </p>
+      <div class="hero-btns">
+        <button class="btn btn-gold" onclick="scrollToAppt()">📅 Book Appointment</button>
+        <a class="btn btn-outline" href="tel:+919876543210">📞 Call Now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="15">0</span>
+          <span class="hero-stat-label">Years Exp.</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="12000">0</span>
+          <span class="hero-stat-label">Happy Patients</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="98">0</span>
+          <span class="hero-stat-label">% Success Rate</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="20">0</span>
+          <span class="hero-stat-label">Treatments</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-arrows">
+    <button class="arrow" onclick="changeSlide(-1)">&#8592;</button>
+    <button class="arrow" onclick="changeSlide(1)">&#8594;</button>
+  </div>
+  <div class="slide-indicators">
+    <div class="dot active" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</section>
+
+<!-- ══ INTRO STRIP ══ -->
+<div class="intro-strip">
+  <div class="container">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <div class="strip-icon">🦷</div>
+        <div class="strip-text"><strong>Advanced Technology</strong><span>Digital X-Ray &amp; 3D Scanning</span></div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">⭐</div>
+        <div class="strip-text"><strong>Award-Winning Care</strong><span>Top Rated Clinic in Chennai</span></div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">💉</div>
+        <div class="strip-text"><strong>Pain-Free Treatments</strong><span>Comfortable &amp; Gentle</span></div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">🕐</div>
+        <div class="strip-text"><strong>Flexible Hours</strong><span>Mon–Sat: 9AM – 8PM</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT SHORT ══ -->
+<section class="about-short">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=900&q=85" alt="Khalid Dental Clinic">
+        </div>
+        <div class="about-img-float">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&q=80" alt="Doctor">
+        </div>
+        <div class="about-badge-float">
+          <strong>15+</strong>
+          <span>Years of<br>Excellence</span>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="section-tag">About Our Clinic</div>
+        <h2 class="section-title">Where Science Meets<br>the Art of Beautiful Smiles</h2>
+        <p class="section-sub">Khalid Esthetic Smiles is Chennai's most trusted premium dental clinic, combining cutting-edge dental science with a warm, patient-first approach. Every smile we craft is a testament to our passion for excellence.</p>
+        <p class="section-sub" style="margin-top:14px">Our state-of-the-art clinic is equipped with the latest dental technology, ensuring every procedure is precise, comfortable, and delivers lasting results.</p>
+        <div class="about-features">
+          <div class="about-feat"><div class="feat-icon">🎯</div><div class="feat-text"><strong>Specialist Team</strong><span>Highly qualified specialists</span></div></div>
+          <div class="about-feat"><div class="feat-icon">🔬</div><div class="feat-text"><strong>Latest Tech</strong><span>3D imaging &amp; digital X-ray</span></div></div>
+          <div class="about-feat"><div class="feat-icon">🛡️</div><div class="feat-text"><strong>ISO Sterilised</strong><span>Certified hygiene protocols</span></div></div>
+          <div class="about-feat"><div class="feat-icon">💎</div><div class="feat-text"><strong>Premium Care</strong><span>Luxury clinic experience</span></div></div>
+        </div>
+        <div style="margin-top:34px">
+          <a class="btn btn-teal" href="pages/about.html">Learn More About Us →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section class="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-tag reveal">Our Treatments</div>
+      <h2 class="section-title reveal d1">Comprehensive Dental Services</h2>
+      <p class="section-sub reveal d2">From routine check-ups to complete smile transformations, we offer a full spectrum of dental care tailored to your unique needs.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal d1">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=700&q=85" alt="Teeth Whitening">
+          <div class="service-img-overlay"></div>
+          <div class="service-badge">Popular</div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon">✨</div>
+          <h3>Teeth Whitening</h3>
+          <p>Achieve a brilliantly bright smile with our professional-grade whitening treatments. Up to 8 shades whiter in just one session.</p>
+          <a class="learn-more" href="pages/treatments.html">Learn More <span>→</span></a>
+        </div>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=700&q=85" alt="Dental Implants">
+          <div class="service-img-overlay"></div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon">🦷</div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacements that restore your smile and confidence with titanium precision.</p>
+          <a class="learn-more" href="pages/treatments.html">Learn More <span>→</span></a>
+        </div>
+      </div>
+      <div class="service-card reveal d3">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=700&q=85" alt="Smile Makeover">
+          <div class="service-img-overlay"></div>
+          <div class="service-badge">Premium</div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon">💎</div>
+          <h3>Smile Makeover</h3>
+          <p>A complete aesthetic transformation combining multiple treatments for a red-carpet-worthy smile crafted just for you.</p>
+          <a class="learn-more" href="pages/treatments.html">Learn More <span>→</span></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px">
+      <a class="btn btn-teal" href="pages/treatments.html">View All Treatments →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BEFORE AFTER PREVIEW ══ -->
+<section class="before-after">
+  <div class="container">
+    <div class="ba-header">
+      <div class="section-tag reveal">Real Transformations</div>
+      <h2 class="section-title reveal d1">Before &amp; After</h2>
+      <p class="section-sub reveal d2">Drag the slider to witness the remarkable smile transformations achieved by our patients at Khalid Esthetic Smiles.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card reveal d1">
+        <div class="ba-compare" id="ba1">
+          <div class="ba-before"><img src="https://images.unsplash.com/photo-1596701062351-8ac031d2a000?w=600&q=80" alt="Before"></div>
+          <div class="ba-after" id="ba1-after"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80" alt="After"></div>
+          <div class="ba-divider" id="ba1-div"></div>
+          <div class="ba-handle" id="ba1-hdl">⇔</div>
+          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
+        </div>
+        <div class="ba-info"><h3>Complete Smile Makeover</h3><p>Stained, chipped, and misaligned teeth — transformed with veneers and whitening.</p><span class="ba-tag">Veneers + Whitening</span></div>
+      </div>
+      <div class="ba-card reveal d2">
+        <div class="ba-compare" id="ba2">
+          <div class="ba-before"><img src="https://images.unsplash.com/photo-1559190394-df5a28aab5c5?w=600&q=80" alt="Before"></div>
+          <div class="ba-after" id="ba2-after"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="After"></div>
+          <div class="ba-divider" id="ba2-div"></div>
+          <div class="ba-handle" id="ba2-hdl">⇔</div>
+          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
+        </div>
+        <div class="ba-info"><h3>Dental Implant Result</h3><p>Missing front tooth — restored with a titanium implant and zirconia crown.</p><span class="ba-tag">Dental Implant</span></div>
+      </div>
+      <div class="ba-card reveal d3">
+        <div class="ba-compare" id="ba3">
+          <div class="ba-before"><img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600&q=80" alt="Before"></div>
+          <div class="ba-after" id="ba3-after"><img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&q=80" alt="After"></div>
+          <div class="ba-divider" id="ba3-div"></div>
+          <div class="ba-handle" id="ba3-hdl">⇔</div>
+          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
+        </div>
+        <div class="ba-info"><h3>Orthodontic Correction</h3><p>Crowded, overlapping teeth — straightened with clear aligner therapy.</p><span class="ba-tag">Clear Aligners</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px">
+      <a class="btn btn-gold" href="pages/before-after.html">View All Cases →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COUNTERS ══ -->
+<section class="counters">
+  <div class="container">
+    <div class="counters-grid">
+      <div class="counter-item reveal"><div class="counter-num count-anim" data-target="15">0</div><div class="counter-label">Years of Excellence</div></div>
+      <div class="counter-item reveal d1"><div class="counter-num count-anim" data-target="12000">0</div><div class="counter-label">Happy Patients</div></div>
+      <div class="counter-item reveal d2"><div class="counter-num count-anim" data-target="98">0</div><div class="counter-label">% Success Rate</div></div>
+      <div class="counter-item reveal d3"><div class="counter-num count-anim" data-target="20">0</div><div class="counter-label">Expert Specialists</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testimonials">
+  <div class="container">
+    <div class="test-header">
+      <div class="section-tag reveal">Patient Stories</div>
+      <h2 class="section-title reveal d1">What Our Patients Say</h2>
+      <p class="section-sub reveal d2">Real experiences from real patients who trusted Khalid Esthetic Smiles with their most precious asset — their smile.</p>
+    </div>
+    <div class="test-slider-wrap">
+      <div class="test-track" id="testTrack">
+        <div class="test-card">
+          <div class="test-quote-icon">"</div>
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">The smile makeover at Khalid Esthetic Smiles completely transformed my life. Dr. Khalid and his team made me feel so comfortable throughout. My veneers look absolutely natural!</p>
+          <div class="test-author"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Priya"></div><div class="test-name"><strong>Priya Ramachandra</strong><span>Smile Makeover Patient</span></div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-quote-icon">"</div>
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">I was terrified of dental visits, but the team here changed everything. The pain-free root canal was a revelation! The clinic is stunning and the staff incredibly professional.</p>
+          <div class="test-author"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Arjun"></div><div class="test-name"><strong>Arjun Krishnaswamy</strong><span>Root Canal Patient</span></div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-quote-icon">"</div>
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">My dental implants are perfect — I can't tell them apart from my natural teeth. Dr. Khalid is a true artist. Best dental experience I've ever had, worth every rupee!</p>
+          <div class="test-author"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80" alt="Meera"></div><div class="test-name"><strong>Meera Venkatesh</strong><span>Dental Implant Patient</span></div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-quote-icon">"</div>
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">Clear aligners from Khalid Esthetic Smiles gave me the straight smile I always wanted — without anyone knowing I was wearing them! Fantastic results in 10 months.</p>
+          <div class="test-author"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Karthik"></div><div class="test-name"><strong>Karthik Sundaram</strong><span>Clear Aligner Patient</span></div></div>
+        </div>
+        <div class="test-card">
+          <div class="test-quote-icon">"</div>
+          <div class="test-stars">★★★★★</div>
+          <p class="test-text">From the moment I walked in, I knew this was a premium experience. The whitening results are incredible — my teeth are 8 shades whiter and my confidence has skyrocketed!</p>
+          <div class="test-author"><div class="test-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Ananya"></div><div class="test-name"><strong>Ananya Subramaniam</strong><span>Whitening Patient</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="test-nav" id="testNav">
+      <div class="test-dot active" onclick="goTest(0)"></div>
+      <div class="test-dot" onclick="goTest(1)"></div>
+      <div class="test-dot" onclick="goTest(2)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPOINTMENT FORM ══ -->
+<section class="appt-section" id="appointment">
+  <div class="container">
+    <div class="appt-inner">
+      <div class="appt-text reveal-left">
+        <div class="section-tag" style="color:var(--gold-lt);border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.1)">Book an Appointment</div>
+        <h2>Ready for Your<br>Dream Smile?</h2>
+        <p>Take the first step towards the confident, beautiful smile you deserve. Our team is ready to craft your perfect treatment plan.</p>
+        <div class="appt-features">
+          <div class="appt-feat"><div class="appt-feat-icon">✅</div><span>Free initial consultation</span></div>
+          <div class="appt-feat"><div class="appt-feat-icon">📅</div><span>Flexible appointment slots</span></div>
+          <div class="appt-feat"><div class="appt-feat-icon">💳</div><span>EMI &amp; insurance options available</span></div>
+          <div class="appt-feat"><div class="appt-feat-icon">🚗</div><span>Free parking available</span></div>
+        </div>
+      </div>
+      <div class="appt-form-wrap reveal-right">
+        <h3 class="form-title">Book Your Appointment</h3>
+        <p class="form-sub">Fill the form — we'll confirm within 2 hours.</p>
+        <div id="apptForm">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+            <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="+91 98765 43210"></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Preferred Date *</label><input type="date"></div>
+            <div class="form-group"><label>Preferred Time *</label><input type="time"></div>
+          </div>
+          <div class="form-group">
+            <label>Treatment Needed</label>
+            <select>
+              <option value="">Select a treatment</option>
+              <option>Teeth Whitening</option><option>Dental Implants</option>
+              <option>Root Canal Treatment</option><option>Smile Makeover</option>
+              <option>Braces &amp; Aligners</option><option>Cosmetic Dentistry</option>
+              <option>Gum Treatment</option><option>General Checkup</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message (optional)</label><textarea placeholder="Any specific concerns or questions..."></textarea></div>
+          <button class="submit-btn" onclick="submitAppt()">📅 Book My Appointment</button>
+        </div>
+        <div class="success-msg" id="apptSuccess">
+          <div class="check">🎉</div>
+          <h4>Appointment Booked!</h4>
+          <p>We'll confirm via WhatsApp or call within 2 hours. See you at Khalid Esthetic Smiles!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="flogo">Khalid<span style="color:var(--gold)">.</span>Esthetic Smiles</div>
+        <div style="font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:3px">Premium Dental Care — Chennai</div>
+        <p class="footer-about">Chennai's most trusted premium dental clinic delivering beautiful, healthy smiles since 2009. Your confidence is our greatest achievement.</p>
+        <div class="footer-socials">
+          <a class="social-btn" href="#" title="Facebook">f</a>
+          <a class="social-btn" href="#" title="Instagram">📷</a>
+          <a class="social-btn" href="#" title="YouTube">▶</a>
+          <a class="social-btn" href="#" title="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/treatments.html">Our Treatments</a></li>
+          <li><a href="pages/before-after.html">Before &amp; After</a></li>
+          <li><a href="pages/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Treatments</h4>
+        <ul>
+          <li><a href="pages/treatments.html">Teeth Whitening</a></li>
+          <li><a href="pages/treatments.html">Dental Implants</a></li>
+          <li><a href="pages/treatments.html">Smile Makeover</a></li>
+          <li><a href="pages/treatments.html">Root Canal</a></li>
+          <li><a href="pages/treatments.html">Clear Aligners</a></li>
+          <li><a href="pages/treatments.html">Gum Treatment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 27.59/117, Balakrishnapuram, Adambakkam, Chennai, Tamil Nadu 600088</a></li>
+          <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+          <li><a href="mailto:Kgdentist@gmail.com ">✉️ Kgdentist@gmail.com </a></li>
+          <li><a href="#">🕐 Mon–Sat: 9AM – 8PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Khalid Esthetic Smiles. All rights reserved.</div>
+      <div class="footer-badge"><div class="gold-dot"></div>Designed with ❤️ for Beautiful Smiles</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ FLOATING ACTION BUTTONS ══ -->
+<div class="float-actions">
+  <button class="float-book" onclick="scrollToAppt()">📅 Book Now</button>
+  <div class="float-call-wrap">
+    <span class="float-tooltip">Call Us</span>
+    <a class="float-call" href="tel:+919876543210" title="Call Us">📞</a>
+  </div>
+  <div class="float-wa-wrap">
+    <span class="float-tooltip">WhatsApp Us</span>
+    <a class="float-wa" href="https://wa.me/919876543210" target="_blank" title="WhatsApp Us">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
+    </a>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
