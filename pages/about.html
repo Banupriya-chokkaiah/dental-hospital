@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us | Khalid Esthetic Smiles – Premium Dental Care, Chennai</title>
-<meta name="description" content="Meet the team behind Khalid Esthetic Smiles, Chennai's premier dental clinic. Learn about our mission, values, and expert dental specialists.">
+<title>About Us | Khalid Aesthetic Smiles – Premium Dental Care, Chennai</title>
+<meta name="description" content="Meet the team behind Khalid Aesthetic Smiles, Chennai's premier dental clinic. Learn about our mission, values, and expert dental specialists.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ══════════════════════════════════════════════
-   KHALID ESTHETIC SMILES — ABOUT PAGE
+   KHALID Aesthetic SMILES — ABOUT PAGE
    (Self-contained, mirrors main site design)
 ══════════════════════════════════════════════ */
 :root {
@@ -357,15 +357,38 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
   .gallery-grid { grid-template-columns:1fr; }
   .footer-grid { grid-template-columns:1fr; }
   .why-grid { grid-template-columns:1fr 1fr; }
+  .team-grid { grid-template-columns:1fr; }
   .float-book { display:none; }
 }
 @media(max-width:480px){
   .why-grid { grid-template-columns:1fr; }
-  .team-grid { grid-template-columns:1fr 1fr; }
+  .team-grid { grid-template-columns:1fr; }
   .cta-btns { flex-direction:column; align-items:center; }
 }
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.18s, opacity 0.18s;
+}
+.social-btn:hover { transform: scale(1.1); opacity: 0.88; }
+
+.social-btn.fb { background: #1877F2; }
+.social-btn.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-btn.yt { background: #FF0000; }
+.social-btn.li { background: #0A66C2; }
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
 </style>
-</head>
+</head>         
 <body>
 
 <!-- ══ NAVBAR ══ -->
@@ -419,6 +442,7 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
 </section>
 
 <!-- ══ DOCTOR / ABOUT SECTION ══ -->
+<!-- ══ DOCTOR / ABOUT SECTION ══ -->
 <section class="doctor-section">
   <div class="container">
     <div class="doctor-grid">
@@ -426,30 +450,34 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
       <!-- Doctor Card -->
       <div class="doctor-card reveal-left">
         <div class="doctor-img">
-          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=85" alt="Dr. Khalid">
+          <img src="../img/doctor.jpg" alt="Dr. Khalid Ghiaz">
         </div>
         <div class="doctor-body">
-          <div class="doctor-name">Dr. Khalid</div>
-          <div class="doctor-qual">BDS, MDS (Prosthodontics &amp; Implantology)</div>
-          <div class="doctor-role">Founder &amp; Chief Dental Surgeon</div>
+          <div class="doctor-name">Dr. Khalid Ghiaz</div>
+          <div class="doctor-qual">BDS, MDS (Prosthodontics)</div>
+          <div class="doctor-role">Founder & Chief Dental Surgeon</div>
           <div class="doctor-divider"></div>
-          <div class="doctor-bio">With over 30 years of specialised experience, Dr. Khalid is one of Chennai's most sought-after dental surgeons. He trained at premier institutions across India and internationally, bringing world-class expertise to every patient's smile.</div>
+
+          <div class="doctor-bio">
+            Dr. Khalid Ghiaz is a distinguished dental practitioner and academician with over 29 years of experience in restorative and prosthetic dentistry. He has been successfully running his dental clinic in Adambakkam, Chennai, for nearly three decades, earning the trust of thousands of patients through his expertise and patient-first approach.
+          </div>
+
           <div class="doctor-stats">
             <div class="doc-stat">
-              <strong>30+</strong>
+              <strong>29+</strong>
               <span>Years Experience</span>
             </div>
             <div class="doc-stat">
-              <strong>12K+</strong>
+              <strong>15K+</strong>
               <span>Happy Patients</span>
             </div>
             <div class="doc-stat">
               <strong>100%</strong>
-              <span>Success Rate</span>
+              <span>Patient Satisfaction</span>
             </div>
             <div class="doc-stat">
               <strong>100%</strong>
-              <span>Advanced Treatments </span>
+              <span>Advanced Care</span>
             </div>
           </div>
         </div>
@@ -458,39 +486,57 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
       <!-- Doctor Info -->
       <div class="doctor-info-text reveal-right">
         <div class="section-tag">Our Story</div>
-        <h2 class="section-title">Crafting Confident Smiles Since 2009</h2>
-        <p class="section-sub">Khalid Aesthetic Smiles was founded with a singular vision — to bring world-class dental care to Chennai in an environment that feels warm, welcoming, and completely stress-free. Every patient who walks through our doors is treated as family.</p>
-        <p class="section-sub" style="margin-top:14px;">From our humble beginnings in 2009, we've grown into one of Chennai's most-recognised dental practices, trusted by patients from across Tamil Nadu and beyond. Our success is built on one foundation: genuine care for every smile we create.</p>
+        <h2 class="section-title">Crafting Confident Smiles </h2>
+
+        <p class="section-sub">
+          Khalid Aesthetic Smiles was founded with a vision to deliver high-quality, patient-focused dental care in Chennai. Led by Dr. Khalid Ghiaz, the clinic combines years of clinical excellence with a warm, welcoming environment for every patient.
+        </p>
+
+        <p class="section-sub" style="margin-top:14px;">
+          An experienced Oral and Maxillofacial Practitioner, Dr. Khalid specializes in Crown & Bridge treatments, removable dentures, and dental implantology. His approach focuses on restoring function, enhancing aAesthetics, and ensuring long-term oral health through personalized treatment plans.
+        </p>
+
+        <p class="section-sub" style="margin-top:14px;">
+          In addition to his clinical work, Dr. Khalid has made significant academic contributions. He has served as the Head of Department at Priyadarshini Dental College, Thiruvallur, and has authored and presented numerous academic papers. He also worked as a Consultant Prosthodontist at MV Diabetic Centre from 1998 to 2016 and has been associated with leading clinics across Chennai, including Mylapore, Perungudi, and Apollo Family Clinic, Anna Nagar.
+        </p>
 
         <div class="doctor-quote">
           <blockquote>
-            "A beautiful smile is not a luxury — it's a right. My mission is to make premium, compassionate dental care accessible to every patient who trusts us with their smile."
+            "Delivering functional, aAesthetic, and long-lasting dental solutions with care and precision is at the heart of everything we do."
           </blockquote>
-          <cite>— Dr. Khalid, Founder</cite>
+          <cite>— Dr. Khalid Ghiaz</cite>
         </div>
 
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:14px;font-weight:700;">Areas of Specialisation</h3>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:14px;font-weight:700;">
+          Areas of Specialisation
+        </h3>
+
         <div class="specialties">
-          <span class="spec-tag">Smile Makeovers</span>
+          <span class="spec-tag">Crown & Bridge</span>
           <span class="spec-tag">Dental Implants</span>
-          <span class="spec-tag">Cosmetic Dentistry</span>
+          <span class="spec-tag">Removable Dentures</span>
           <span class="spec-tag">Prosthodontics</span>
-          <span class="spec-tag">Clear Aligners</span>
-          <span class="spec-tag">Teeth Whitening</span>
-          <span class="spec-tag">Gum Aesthetics</span>
+          <span class="spec-tag">Oral Rehabilitation</span>
+          <span class="spec-tag">Cosmetic Dentistry</span>
           <span class="spec-tag">Full Mouth Rehab</span>
+          <span class="spec-tag">Restorative Dentistry</span>
         </div>
 
         <div class="vision-mission">
           <div class="vm-card reveal d1">
             <div class="vm-icon">🎯</div>
             <h4>Our Mission</h4>
-            <p>To deliver exceptional, patient-centric dental care using the latest technology and evidence-based treatments — making every visit comfortable, every result outstanding.</p>
+            <p>
+              To provide high-quality, ethical, and patient-centric dental care using advanced techniques, ensuring comfort, functionality, and long-term oral health for every patient.
+            </p>
           </div>
+
           <div class="vm-card reveal d2">
             <div class="vm-icon">🌟</div>
             <h4>Our Vision</h4>
-            <p>To be Chennai's most loved dental clinic — where patients leave not just with a healthier smile, but with renewed confidence and a reason to smile every single day.</p>
+            <p>
+              To be one of Chennai’s most trusted dental care providers, known for clinical excellence, compassionate service, and creating confident, healthy smiles.
+            </p>
           </div>
         </div>
 
@@ -503,13 +549,12 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
     </div>
   </div>
 </section>
-
 <!-- ══ WHY CHOOSE US ══ -->
 <section class="why-choose">
   <div class="container">
     <div class="why-header">
       <div class="section-tag reveal">Why Choose Us</div>
-      <h2 class="section-title reveal d1">The Khalid Esthetic Smiles Difference</h2>
+      <h2 class="section-title reveal d1">The Khalid Aesthetic Smiles Difference</h2>
       <p class="section-sub reveal d2">We combine clinical excellence with a luxury experience — because you deserve both.</p>
     </div>
     <div class="why-grid">
@@ -557,10 +602,10 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
     </div>
     <div class="gallery-grid">
       <div class="gal-item reveal-left">
-        <img src="../img/c1.jpg" alt="Clinic Reception">
+        <img src="../img/banner_image1.jpg" alt="Clinic Reception">
       </div>
       <div class="gal-item reveal d1">
-        <img src="../img/c2.jpg" alt="Treatment Room">
+        <img src="../img/banner_image2.jpg" alt="Treatment Room">
       </div>
       <div class="gal-item reveal d2">
         <img src="../img/c3.jpg" alt="Dental Equipment">
@@ -581,53 +626,44 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
     <div class="team-header">
       <div class="section-tag reveal">Our Specialists</div>
       <h2 class="section-title reveal d1">Meet Our Expert Team</h2>
-      <p class="section-sub reveal d2">A passionate team of qualified specialists, each dedicated to delivering the finest dental care with warmth and expertise.</p>
+      <p class="section-sub reveal d2">
+        A dedicated team of experienced dental professionals committed to delivering exceptional care with precision, compassion, and expertise.
+      </p>
     </div>
+
     <div class="team-grid">
+
+      <!-- Doctor 1 -->
       <div class="team-card reveal d1">
         <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&q=80" alt="Dr. Khalid">
+          <img src="../img/doctor.jpg" alt="Dr. Khalid Ghiaz">
         </div>
         <div class="team-body">
-          <h4>Dr. Khalid</h4>
-          <div class="team-role">Prosthodontist &amp; Implantologist</div>
-          <p>Founder &amp; Chief Surgeon with 30+ years in smile makeovers and full-mouth rehabilitation.</p>
+          <h4>Dr. Khalid Ghiaz</h4>
+          <div class="team-role">Prosthodontist & Implantologist</div>
+          <p>
+            With over 29 years of experience in restorative and prosthetic dentistry, Dr. Khalid specializes in crown & bridge treatments, dental implants, and full-mouth rehabilitation. He combines academic excellence with advanced clinical expertise to deliver long-lasting, patient-focused results.
+          </p>
         </div>
       </div>
+
+      <!-- Doctor 2 -->
       <div class="team-card reveal d2">
         <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&q=80" alt="Dr. Ayesha">
+          <img src="../img/doctor2.jpg" alt="Dr. Khalida Ashraf">
         </div>
         <div class="team-body">
-          <h4>Dr. Ayesha Fathima</h4>
-          <div class="team-role">Orthodontist</div>
-          <p>Specialist in braces and clear aligners, helping patients achieve perfectly aligned, confident smiles.</p>
+          <h4>Dr. Khalida Ashraf</h4>
+          <div class="team-role">General Dental Surgeon</div>
+          <p>
+            With over 25 years of clinical experience, Dr. Khalida is known for her gentle, patient-centric approach. She has been associated with leading dental clinics across Chennai and focuses on delivering comfortable, personalized dental care with strong ethical values.
+          </p>
         </div>
       </div>
-      <div class="team-card reveal d3">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&q=80" alt="Dr. Rajan">
-        </div>
-        <div class="team-body">
-          <h4>Dr. Rajan Pillai</h4>
-          <div class="team-role">Endodontist</div>
-          <p>Expert in painless root canal treatments and endodontic microsurgery with a 100% success rate.</p>
-        </div>
-      </div>
-      <div class="team-card reveal d4">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Dr. Preethi">
-        </div>
-        <div class="team-body">
-          <h4>Dr. Preethi Shankar</h4>
-          <div class="team-role">Periodontist</div>
-          <p>Specialist in gum health and laser gum treatments, ensuring your smile's foundation is strong and healthy.</p>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
-
 <!-- ══ CTA STRIP ══ -->
 <section class="cta-strip">
   <div class="container cta-inner">
@@ -647,13 +683,15 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
       <div class="footer-brand">
         <div class="flogo">Khalid<span style="color:var(--gold)">.</span>Aesthetic Smiles</div>
         <div style="font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:3px">Premium Dental Care — Chennai</div>
-        <p class="footer-about">Chennai's most trusted premium dental clinic delivering beautiful, healthy smiles since 2009. Your confidence is our greatest achievement.</p>
-        <div class="footer-socials">
-          <a class="social-btn" href="#" title="Facebook">f</a>
-          <a class="social-btn" href="#" title="Instagram">📷</a>
-          <a class="social-btn" href="#" title="YouTube">▶</a>
-          <a class="social-btn" href="#" title="LinkedIn">in</a>
-        </div>
+        <p class="footer-about">Chennai's most trusted premium dental clinic delivering beautiful, healthy smiles . Your confidence is our greatest achievement.</p>
+         <div class="footer-socials">
+  
+  <!-- Instagram -->
+  <a class="social-btn ig" href="https://www.instagram.com/khalidsdentalcare?igsh=MTF2djk2amh2d2V0Zw%3D%3D" title="Instagram" aria-label="Instagram" target="_blank">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+  </a>
+
+</div>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -680,30 +718,30 @@ footer { background:var(--text); color:rgba(255,255,255,0.7); padding:72px 0 32p
         <h4>Contact</h4>
         <ul>
           <li><a href="#">📍 27.59/117, Balakrishnapuram, Adambakkam, Chennai, Tamil Nadu 600088</a></li>
-          <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
-          <li><a href="mailto:Kgdentist@gmail.com ">✉️ Kgdentist@gmail.com </a></li>
-          <li><a href="mailto:mountsdental1997@gmail.com">✉️ mountsdental1997@gmail.com </a></li>
+          <li><a href="tel:+917200167067">📞 +91 72001 67067</a></li>
+          <li><a href="https://wa.me/917200167067" target="_blank" rel="noopener noreferrer">💬 WhatsApp: +91 72001 67067</a></li>
+          <li><a href="mailto:Kgdentist@gmail.com">✉️ Kgdentist@gmail.com</a></li>
+          <li><a href="mailto:mountsdental1997@gmail.com">✉️ mountsdental1997@gmail.com</a></li>
           <li><a href="#">🕐 Mon–Sat: 9AM – 8PM</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">© 2025 Khalid Esthetic Smiles. All rights reserved.</div>
+      <div class="footer-copy">© 2026 Khalid Aesthetic Smiles. All rights reserved.</div>
       <div class="footer-badge"><div class="gold-dot"></div>Designed with ❤️ for Beautiful Smiles</div>
     </div>
   </div>
 </footer>
-
 <!-- ══ FLOATING ACTIONS ══ -->
 <div class="float-actions">
   <button class="float-book" onclick="scrollToAppt()">📅 Book Now</button>
   <div class="float-call-wrap">
     <span class="float-tooltip">Call Us</span>
-    <a class="float-call" href="tel:+919876543210" title="Call Us">📞</a>
+    <a class="float-call" href="tel:+917200167067" title="Call Us">📞</a>
   </div>
   <div class="float-wa-wrap">
     <span class="float-tooltip">WhatsApp Us</span>
-    <a class="float-wa" href="https://wa.me/919876543210" target="_blank" title="WhatsApp Us">
+    <a class="float-wa" href="https://wa.me/917200167067" target="_blank" title="WhatsApp Us">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.548 4.103 1.508 5.836L.057 23.293a.5.5 0 00.607.65l5.674-1.484A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-4.964-1.349l-.356-.212-3.668.96.977-3.572-.232-.368A9.818 9.818 0 012.182 12C2.182 6.578 6.578 2.182 12 2.182S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>
     </a>
   </div>

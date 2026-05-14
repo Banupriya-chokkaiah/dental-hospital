@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════
-   KHALID ESTHETIC SMILES — MAIN JAVASCRIPT
+   KHALID Aesthetic SMILES — MAIN JAVASCRIPT
    ══════════════════════════════════════════════ */
 
 // ── PAGE NAVIGATION ──

@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════
-   KHALID ESTHETIC SMILES — MASTER STYLESHEET
+   KHALID Aesthetic SMILES — MASTER STYLESHEET
    ══════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
@@ -182,9 +182,9 @@ ul { list-style:none; }
   background:linear-gradient(105deg,rgba(8,18,36,0.80) 0%,rgba(8,18,36,0.52) 55%,rgba(8,18,36,0.18) 100%);
 }
 
-.slide-1 .slide-bg { background-image:url('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1800&q=90'); }
-.slide-2 .slide-bg { background-image:url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1800&q=90'); }
-.slide-3 .slide-bg { background-image:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1800&q=90'); }
+.slide-1 .slide-bg { background-image:url('../img/banner_image1.jpg'); }
+.slide-2 .slide-bg { background-image:url('../img/banner_image2.jpg'); }
+.slide-3 .slide-bg { background-image:url('../img/banner_image1.jpg'); }
 
 /* ✅ Hero Content — properly spaced below navbar */
 .hero-content {
